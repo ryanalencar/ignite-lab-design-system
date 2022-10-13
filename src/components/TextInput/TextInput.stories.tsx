@@ -1,13 +1,26 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { TextInput, ITextInputProps } from './TextInput'
+import { Meta, StoryObj } from '@storybook/react';
+import { Envelope } from 'phosphor-react';
+
+import { TextInput, ITextInputRootProps } from './TextInput';
 
 export default {
   title: 'Components/TextInput',
-  component: TextInput,
+  component: TextInput.Root,
   args: {
-    children: 'TextInput Component'
+    children: [
+      <TextInput.Icon>
+        <Envelope />
+      </TextInput.Icon>,
+      <TextInput.Input placeholder="Input placeholder" />,
+    ],
   },
-  argTypes: {}
-} as Meta<ITextInputProps>
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+} as Meta<ITextInputRootProps>;
 
-export const Default = {} as StoryObj<ITextInputProps>
+export const Default = {} as StoryObj<ITextInputRootProps>;
