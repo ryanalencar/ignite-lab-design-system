@@ -7,7 +7,7 @@ export interface ITextInputRootProps { children: ReactNode }
 function TextInputRoot({ children }: ITextInputRootProps) {
   return (
     <div
-      className="w-full flex items-center gap-3 py-4 px-3 bg-gray-800 rounded focus-within:ring-2 ring-cyan-300"
+      className="w-full flex h-12 items-center gap-3 py-4 px-3 bg-gray-800 rounded focus-within:ring-2 ring-cyan-300"
     >
       {children}
     </div>

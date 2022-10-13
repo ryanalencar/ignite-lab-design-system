@@ -24,3 +24,9 @@ export default {
 } as Meta<ITextInputRootProps>;
 
 export const Default = {} as StoryObj<ITextInputRootProps>;
+
+export const WithoutIcon = {
+  args: {
+    children: <TextInput.Input placeholder="Input placeholder" />,
+  },
+} as StoryObj<ITextInputRootProps>;
